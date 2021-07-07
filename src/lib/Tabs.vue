@@ -76,8 +76,8 @@ export default {
 
 <style lang="scss">
 $blue: #40a9ff;
-$color: #333;
-$border-color: #d9d9d9;
+$color: #B2C3CD;
+$border-color: #586F80;
 
 .gulu-tabs {
   &-nav {

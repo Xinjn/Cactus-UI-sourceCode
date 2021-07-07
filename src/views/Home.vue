@@ -3,10 +3,10 @@
   <div class="topnavAndBanner">
       <Topnav/>
       <div class="banner">
-          <h1>轱辘UI</h1>
-          <h2>一个厉害的UI框架</h2>
+          <h1>Wheels UI</h1>
+          <h2>一款厉害的UI框架</h2>
           <p class="actions">
-              <a href="http://github.com">GitHub</a>
+              <a href="https://github.com/Xinjn">GitHub</a>
               <router-link to="/doc">开始</router-link>
           </p>
       </div>
@@ -22,18 +22,48 @@
       </li>
       <li>
         <svg>
-          <use xlink:href="#icon-ts"></use>
+          <use xlink:href="#icon-TS"></use>
         </svg>
         <h3>基于 TypeScript </h3>
         <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg>
-          <use xlink:href="#icon-light"></use>
+          <use xlink:href="#icon-gongju"></use>
         </svg>
         <h3>代码易读</h3>
         <p>每个组件的源代码都极其简洁</p>
       </li>
+    </ul>
+  </div>
+  <div class="bottomnav">
+    <ul>
+      <li>
+        <svg>
+        <use xlink:href="#icon-github"></use>
+        </svg>
+      </li>
+      <li>
+        <svg>
+        <use xlink:href="#icon-Google"></use>
+        </svg>
+      </li>
+      <li>
+        <svg>
+        <use xlink:href="#icon-npm"></use>
+        </svg>
+      </li>
+            <li>
+        <svg>
+        <use xlink:href="#icon-defc"></use>
+        </svg>
+      </li>
+      <li>
+        <svg>
+        <use xlink:href="#icon-qq"></use>
+        </svg>
+      </li>
+
     </ul>
   </div>
 </div>
@@ -47,16 +77,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
+$green: #3F9C68;
 $border-radius: 4px;
-$color: #007974;
+$color: #B2C3CD;
 .topnavAndBanner {
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  // background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  background: #182B3E;
   clip-path: ellipse(80% 60% at 50% 40%);
+}
+.banner {
+  color: $color;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  >.actions {
+    padding: 8px 0;
+    a {
+      margin: 0 8px;
+      background: $green;
+      color: white;
+      display: inline-block;
+      padding: 8px 24px;
+      border-radius: $border-radius;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 .features {
   margin: 64px auto;
   padding: 0 16px;
+  color: #586F80;
   @media (min-width: 800px) {
     width: 800px;
     >ul {
@@ -102,26 +156,21 @@ $color: #007974;
     }
   }
 }
-.banner {
-  color: $color;
-  padding: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  >.actions {
-    padding: 8px 0;
-    a {
-      margin: 0 8px;
-      background: $green;
-      color: white;
-      display: inline-block;
-      padding: 8px 24px;
-      border-radius: $border-radius;
-      &:hover {
-        text-decoration: none;
-      }
+.bottomnav{
+
+  ul{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: -30px;
+    svg {
+      width: 23px;
+      height: 23px;
+      margin-left: 30px;
     }
-  }
+}
+
+  
 }
 </style>

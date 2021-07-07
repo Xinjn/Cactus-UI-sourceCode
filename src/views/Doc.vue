@@ -2,7 +2,7 @@
     <div class="layout">
         <Topnav toggleMenuBttonVisible class="nav"/>
         <div class="content" >
-        <aside v-if="menuVisible" >
+        <aside :class="menuVisible ? 'show' : ''" >
           <h2>文档</h2>
           <ol>
             <li>
@@ -58,7 +58,7 @@ $aside-index:10;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  
+
   > .nav {
     flex-shrink: 0;
     z-index: 2300;
@@ -81,12 +81,12 @@ $aside-index:10;
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: white;
+
   }
 }
 aside {
   z-index: $aside-index;
-  background: lightblue;
+  background: #061928;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -94,6 +94,9 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
+  color: #586F80;
+  left: -150px;
+  transition: left .3s;
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
@@ -106,14 +109,21 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: white;
+        background: #256E53;
+          color: #B2C3CD;
       }
     }
   }
 }
-
+aside.show{
+  left: 0;
+}
 main {
   overflow: auto;
-
+  color: #586F80;
+  
+  .markdown-body{
+    color: #586F80;
+  }
 }
 </style>
