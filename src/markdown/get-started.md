@@ -1,4 +1,4 @@
-# 开始使用
+# 快速上手
 
 请先[安装](#/doc/install)本组件库。
 
@@ -27,3 +27,4 @@ export default {
 }
 </script>
 ```
+下一节：[Icon图标](#/doc/icon)

@@ -1,11 +1,12 @@
 <demo>
-常规使用
+基础用法
 </demo>
 <template>
+<div class="describe">基础的按钮用法。</div>
 <div>
-  <Button>你好</Button>
-  <Button theme="link">你好</Button>
-  <Button theme="text">你好</Button>
+  <Button>默认按钮</Button>
+  <Button theme="link">链接按钮</Button>
+  <Button theme="text">文本按钮</Button>
 </div>
 </template>
 
@@ -17,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.describe{
+  margin-bottom:16px;
+}
+</style>

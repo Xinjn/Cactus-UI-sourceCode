@@ -1,9 +1,10 @@
 <template>
-  <h1>Tabs 标签</h1>
+  <h1>Input 输入框</h1>
   <div class="line"></div>
-  <div>分隔内容上有关联但属于不同类别的数据集合。</div>
-  <Demo :component="Tabs1Demo" />
-  <h2>Tab Attributes</h2>
+  <div>基础表单组件，支持v-model绑定和原生事件。</div>
+  <Demo :component="Input1Demo" />
+  <Demo :component="Input2Demo" />
+  <h2>Attributes</h2>
   <div class="line"></div>
   <table>
     <tr>
@@ -14,45 +15,56 @@
       <td>默认值</td>
     </tr>
     <tr>
-      <td>title </td>
-      <td>当前导航栏的名称，唯一且必填</td>
+      <td>placeholder</td>
+      <td>原生属性</td>
       <td>String</td>
       <td>—</td>
       <td>—</td>
     </tr>
-  </table>
-  <h2>Tabs Attributes</h2>
-  <div class="line"></div>
-    <table>
     <tr>
-      <td>参数</td>
-      <td>说明</td>
-      <td>类型</td>
-      <td>可选值</td>
-      <td>默认值</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>v-model:selected绑定的ref实例</td>
+      <td>type</td>
+      <td>原生属性</td>
       <td>String</td>
       <td>—</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>icon</td>
+      <td>icon 图标名</td>
+      <td>String</td>
       <td>—</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>disabled</td>
+      <td>disabled 状态</td>
+      <td>Boolean</td>
+      <td>—</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>error</td>
+      <td>error 状态</td>
+      <td>Boolean</td>
+      <td>—</td>
+      <td>false</td>
     </tr>
   </table>
-   下一节： <router-link to="/doc/input"><span class="title">输入框</span></router-link>
+   回到开始：<router-link to="/doc/intro"><span class="title">介绍</span></router-link>
 </template>
 
 <script lang="ts">
 import Demo from './Demo.vue'
 import Tabs1Demo from './Tabs1.demo.vue'
-
+import Input1Demo from "./Input1.demo.vue"
+import Input2Demo from "./Input2.demo.vue"
 export default {
   components: {
     Demo
   },
   setup() {
     return {
-      Tabs1Demo
+      Tabs1Demo,Input1Demo,Input2Demo
     }
   }
 }

@@ -1,10 +1,11 @@
 <template>
-  <h1>Tabs 标签</h1>
+  <h1>Icon 图标</h1>
   <div class="line"></div>
-  <div>分隔内容上有关联但属于不同类别的数据集合。</div>
-  <Demo :component="Tabs1Demo" />
-  <h2>Tab Attributes</h2>
+  <div>提供一些常用的 Icon 图标集合。</div>
+  <Demo :component="Icon1Demo" />
+  <h2>Attributes</h2>
   <div class="line"></div>
+  <div>虽然Icon图标将被渲染为span标签，但其width、height 、fill属性将与组件根元素保持一致，因此你可以直接在组件标签上设置样式。</div>
   <table>
     <tr>
       <td>参数</td>
@@ -14,45 +15,27 @@
       <td>默认值</td>
     </tr>
     <tr>
-      <td>title </td>
-      <td>当前导航栏的名称，唯一且必填</td>
-      <td>String</td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-  </table>
-  <h2>Tabs Attributes</h2>
-  <div class="line"></div>
-    <table>
-    <tr>
-      <td>参数</td>
-      <td>说明</td>
-      <td>类型</td>
-      <td>可选值</td>
-      <td>默认值</td>
-    </tr>
-    <tr>
       <td>name</td>
-      <td>v-model:selected绑定的ref实例</td>
+      <td>	icon 图标名</td>
       <td>String</td>
       <td>—</td>
       <td>—</td>
     </tr>
+    
   </table>
-   下一节： <router-link to="/doc/input"><span class="title">输入框</span></router-link>
+   下一节： <router-link to="/doc/switch"><span class="title">开关</span></router-link>
 </template>
 
 <script lang="ts">
 import Demo from './Demo.vue'
-import Tabs1Demo from './Tabs1.demo.vue'
-
+import Icon1Demo from "./Icon1.demo.vue"
 export default {
   components: {
     Demo
   },
   setup() {
     return {
-      Tabs1Demo
+      Icon1Demo
     }
   }
 }
@@ -62,6 +45,9 @@ export default {
 .line{
   border-top: 1px solid #586f805d;
   margin-bottom: 20px;
+}
+.title{
+  color: #3f9c68;
 }
 table{
   border-collapse: collapse;
@@ -83,8 +69,5 @@ table{
     white-space:pre-wrap; 
     word-break:break-all;
   }
-}
-.title{
-  color: #3f9c68;
 }
 </style> 

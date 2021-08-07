@@ -2,6 +2,7 @@
 一键打开 Dialog
 </demo>
 <template>
+<div class="describe">Dialog 组件可以是标签，甚至可以是js代码</div>
 <div>
   <Button @click="showDialog">打开对话框</Button>
 </div>
@@ -35,3 +36,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.describe{
+  margin-bottom:16px;
+}
+</style>

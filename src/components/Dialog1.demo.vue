@@ -2,6 +2,7 @@
 常规使用
 </demo>
 <template>
+<div class="describe">Dialog 弹出一个对话框，适合需要定制性更大的场景</div>
 <div>
   <Button @click="toggle">打开对话框</Button>
   <Dialog v-model:visible="x" :closeOnClickOverlay="false" :ok="f1" :cancel="f2">
@@ -44,3 +45,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.describe{
+  margin-bottom:16px;
+}
+</style>

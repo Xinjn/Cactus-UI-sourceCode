@@ -18,18 +18,65 @@
             <h2>组件列表</h2>
             <ol>
                 <li>
-                   <router-link to="/doc/switch">Switch 组件</router-link>
-                </li>
-                <li>
-                    <router-link to="/doc/button">Button 组件</router-link>
-                </li>
-                <li>
-                    <router-link to="/doc/dialog">Dialog 组件</router-link>
-                </li>
-                <li>
-                    <router-link to="/doc/tabs">Tabs 组件
+                    <router-link to="/doc/icon">Icon 图标
                     </router-link>
                 </li> 
+                <li>
+                   <router-link to="/doc/switch">Switch 开关</router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/button">Button 按钮</router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/dialog">Dialog 对话框
+
+</router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/tabs">Tabs 标签
+                    </router-link>
+                </li> 
+                <li>
+                    <router-link to="/doc/input">Input 输入框
+                    </router-link>
+                </li> 
+            </ol>
+             <h2>其他项目</h2>
+            <ol>
+                <li>
+                    <router-link to="/doc/blog">技术文章与学习笔记
+                    </router-link>
+                </li> 
+                <li>
+                   <router-link to="/doc/morenyVue">卡片记账</router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/multiplayerBlog">多人博客
+                    </router-link>
+                </li> 
+                <li>
+                    <router-link to="/doc/evernote">印象云笔记
+                    </router-link>
+                </li> 
+                <li>
+                    <router-link to="/doc/imgUpload">ImgUp图床
+                    </router-link>
+                </li> 
+                <li>
+                    <router-link to="/doc/morneyReact">简易记账</router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/translator">小程序开发翻译工具
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/canvas">Canvas涂鸦板
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/pikachu">画一个皮卡丘
+                    </router-link>
+                </li>
             </ol>
         </aside>
         <main>
@@ -45,8 +92,8 @@ import { inject, Ref } from 'vue';
 export default {
   components: { Topnav },
   setup(){
-     const menuVisible = inject<Ref<boolean>>('menuVisible') // get
-     
+    const menuVisible = inject<Ref<boolean>>('menuVisible') // get
+    
     return {menuVisible}
   }
 };
@@ -58,10 +105,8 @@ $aside-index:10;
   display: flex;
   flex-direction: column;
   height: 100vh;
-
-  > .nav {
+  >.nav {
     flex-shrink: 0;
-    z-index: 2300;
   }
   > .content {
     flex-grow: 1;
@@ -97,11 +142,14 @@ aside {
   color: #586F80;
   left: -150px;
   transition: left .3s;
+  overflow-y: scroll;
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
+    font-weight: bold;
   }
   > ol {
+
     > li {
       >a {
         display: block;
@@ -109,14 +157,21 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: #256E53;
-          color: #B2C3CD;
+        // background: #256E53;
+          color: #256E53;
+          border-left:5px solid #256E53;
       }
     }
   }
 }
 aside.show{
   left: 0;
+}
+aside::-webkit-scrollbar {
+    width: 1px;
+}
+aside::-webkit-scrollbar-thumb {
+    background-color: #061928;
 }
 main {
   overflow: auto;

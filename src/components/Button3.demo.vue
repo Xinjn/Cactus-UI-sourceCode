@@ -2,6 +2,7 @@
 支持 level
 </demo>
 <template>
+<div class="describe">按钮的不同状态。</div>
 <div>
   <div>
     <Button level="main">主要按钮</Button>
@@ -29,3 +30,8 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.describe{
+  margin-bottom:16px;
+}
+</style>

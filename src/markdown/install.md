@@ -12,4 +12,4 @@ npm i vue3-wheels
 yarn add vue3-wheels
 ```
 
-下一节：[开始使用](#/doc/get-started)
+下一节：[快速上手](#/doc/get-started)
